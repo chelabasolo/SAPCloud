@@ -1,0 +1,19 @@
+<mvc:View controllerName="SAPCloud2.SAPCloud2.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<Button id="btnDisplay" xmlns="sap.m" text="Display"
+							press="onDisplay"/>
+						<Button id="btnClear" xmlns="sap.m" text="Clear"
+							press="onClear"/>
+						<ToolbarSpacer />
+						<ToolbarSpacer />
+						<Text id="txtSample" text=""  />
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

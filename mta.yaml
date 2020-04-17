@@ -1,0 +1,58 @@
+ID: mta_SAPCloud2
+_schema-version: '2.1'
+parameters:
+  deploy_mode: html5-repo
+version: 0.0.1
+modules:
+  - name: mta-sapcloud2-approuter
+    type: approuter.nodejs
+    path: mta-sapcloud2-approuter
+    parameters:
+      disk-quota: 256M
+      memory: 256M
+    requires:
+      - name: mta_SAPCloud2_html5_repo_runtime
+      - name: uaa_mta_SAPCloud2
+  - name: mta_SAPCloud2_ui_deployer
+    type: com.sap.html5.application-content
+    path: mta_SAPCloud2_ui_deployer
+    requires:
+      - name: mta_SAPCloud2_html5_repo_host
+    build-parameters:
+      requires:
+        - name: SAPCloud2
+          artifacts:
+            - './*'
+          target-path: resources/SAPCloud2
+  - name: SAPCloud2
+    type: html5
+    path: SAPCloud2
+    build-parameters:
+      builder: custom
+      commands:
+        - npm install
+        - npm run build
+      supported-platforms: []
+      build-result: dist
+resources:
+  - name: mta_SAPCloud2_html5_repo_runtime
+    parameters:
+      service-plan: app-runtime
+      service: html5-apps-repo
+    type: org.cloudfoundry.managed-service
+  - name: mta_SAPCloud2_html5_repo_host
+    parameters:
+      service-plan: app-host
+      service: html5-apps-repo
+    type: org.cloudfoundry.managed-service
+  - name: uaa_mta_SAPCloud2
+    parameters:
+      path: ./xs-security.json
+      service-plan: application
+      service: xsuaa
+    type: org.cloudfoundry.managed-service
+  - name: dest_mta_SAPCloud2
+    parameters:
+      service-plan: lite
+      service: destination
+    type: org.cloudfoundry.managed-service
