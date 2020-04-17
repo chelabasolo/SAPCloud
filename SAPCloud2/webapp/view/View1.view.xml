@@ -8,6 +8,8 @@
 							press="onDisplay"/>
 						<Button id="btnClear" xmlns="sap.m" text="Clear"
 							press="onClear"/>
+						<Button id="btnSample" xmlns="sap.m" text="Sample"
+							press=""/>
 						<ToolbarSpacer />
 						<ToolbarSpacer />
 						<Text id="txtSample" text=""  />
