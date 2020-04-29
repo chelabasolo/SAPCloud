@@ -22,7 +22,7 @@ node() {
             //java -jar 'mavenproject10-1.0-SNAPSHOT.jar'
             
             stash includes: "target/*.jar", name: "mavenproject13-1.0-SNAPSHOT"
-            sh "java -jar mavenproject13-1.0-SNAPSHOT" 
+            sh "java -jar mavenproject13-1.0-SNAPSHOT"  
             
        } 
          
