@@ -22,8 +22,8 @@ node() {
              
                 
             //sh "mavenproject10-1.0-SNAPSHOT.jar"
-            cd 'target'
-            java -jar 'a3-1.0-SNAPSHOT.jar'
+            cd "target"
+            java -jar "a3-1.0-SNAPSHOT.jar"
             
             //stash includes: "target/*.jar", name: "a3-1.0-SNAPSHOT"
             //sh "java -jar a3-1.0-SNAPSHOT"  
