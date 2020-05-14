@@ -27,7 +27,7 @@ node() {
             
             stash includes: "target/*.jar", name: "a3-1.0-SNAPSHOT"
             sh "java -jar a3-1.0-SNAPSHOT"   
-            
+             
        } 
           
        //dir("C:/Users/rbanas2/Documents/NetBeansProjects/mavenproject10/target") {
