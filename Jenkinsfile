@@ -20,7 +20,7 @@ node() {
             sh "${mvnHome}/bin/mvn install:install-file -Dfile='C:/Users/rbanas2/OneDrive - DXC Production/DXC/DXC/01_DevX/DevOps/02_SELENIUM/selenium-server-standalone-3.141.59.jar' -DgroupId='com.moneris' -DartifactId='api' -Dversion='1.0.0' -Dpackaging=jar"
 
             
-            
+             
             //sh "mavenproject10-1.0-SNAPSHOT.jar"
             //cd 'target'
             //java -jar 'mavenproject10-1.0-SNAPSHOT.jar'
