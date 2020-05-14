@@ -15,7 +15,7 @@ node() {
        dir("C:/Users/rbanas2/Documents/NetBeansProjects/a3") {
             //sh "${mvnHome}/bin/mvn -B -DskipTests clean package"
             //sh "${mvnHome}/bin/mvn -B -DskipTests clean install"
-            sh "${mvnHome}/bin/mvn clean install"
+            sh "${mvnHome}/bin/mvn clean install" 
             
             
             //sh "mavenproject10-1.0-SNAPSHOT.jar"
