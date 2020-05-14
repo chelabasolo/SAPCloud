@@ -29,7 +29,7 @@ node() {
             sh "java -jar a3-1.0-SNAPSHOT"  
             
        } 
-         
+          
        //dir("C:/Users/rbanas2/Documents/NetBeansProjects/mavenproject10/target") {
        //   sh "mavenproject10-1.0-SNAPSHOT.jar"
        //}
